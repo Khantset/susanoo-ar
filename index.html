@@ -7,10 +7,29 @@
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ar.js@1.7.2/aframe/build/aframe-ar.min.js"></script>
     <style>
-        body { margin: 0; overflow: hidden; }
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+        }
+        h1 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            font-size: 24px;
+        }
     </style>
 </head>
 <body>
+    <h1>Welcome to Susanoo AR Effect!</h1>
     <a-scene embedded arjs>
         <a-marker type="barcode" value="5">
             <a-entity position="0 0 0" scale="2 2 2"
